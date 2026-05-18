@@ -639,6 +639,83 @@ span {
     font-size: 0.95rem;
 }
 
+/* Blogs Section */
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background: var(--bg-main);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-normal);
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 210, 255, 0.2);
+}
+
+.blog-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-info {
+    padding: 25px;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-family: var(--font-primary);
+}
+
+.blog-meta i {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+.blog-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.blog-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-family: var(--font-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.read-more:hover {
+    color: #fff;
+}
+
+.read-more i {
+    transition: transform var(--transition-normal);
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
 /* Contact Section */
 .contact-content {
     display: flex;
@@ -714,7 +791,7 @@ span {
     margin-bottom: 20px;
 }
 
-input, textarea {
+input, textarea, select {
     width: 100%;
     padding: 15px 20px;
     background: rgba(0,0,0,0.2);
@@ -726,10 +803,15 @@ input, textarea {
     transition: var(--transition-fast);
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: var(--accent-color);
     background: rgba(0, 210, 255, 0.05);
+}
+
+select option {
+    background: var(--bg-alt);
+    color: var(--text-primary);
 }
 
 textarea {
@@ -753,6 +835,11 @@ textarea {
 
 .form-status.success {
     color: #00d2ff;
+    display: block;
+}
+
+.form-status.error {
+    color: #ff3366;
     display: block;
 }
 

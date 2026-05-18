@@ -93,10 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.style.opacity = '0.7';
             submitBtn.disabled = true;
 
-            // Simulate form submission delay
-            setTimeout(() => {
+            const formData = new FormData(contactForm);
+            const googleFormURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfHUmtXcfqhS9kxG07sMIQxImnZQMoKvdYvCuJdWlAsYTh4gw/formResponse';
+
+            fetch(googleFormURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(() => {
                 formStatus.textContent = 'Thank you! Your message has been sent successfully.';
                 formStatus.className = 'form-status success';
+                formStatus.style.display = 'block';
                 
                 // Reset form
                 contactForm.reset();
@@ -110,7 +117,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     formStatus.style.display = 'none';
                 }, 5000);
-            }, 1500);
+            }).catch(error => {
+                formStatus.textContent = 'Something went wrong. Please try again.';
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
+                
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.opacity = '1';
+                submitBtn.disabled = false;
+                
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            });
         });
     }
 });

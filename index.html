@@ -28,6 +28,7 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blogs" class="nav-link">Blogs</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -48,9 +49,10 @@
                     <h2 class="role">Digital Marketer & WordPress Developer</h2>
                     <p class="bio">I craft intuitive, user-centric digital experiences with an eye for stunning
                         aesthetics. Transforming complex problems into elegant solutions.</p>
-                    <div class="cta-buttons">
+                    <div class="cta-buttons" style="flex-wrap: wrap;">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
                         <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        <a href="https://drive.google.com/file/d/demo-link/view" target="_blank" class="btn btn-outline"><i class="fa-solid fa-file-pdf"></i> View Resume</a>
                     </div>
                 </div>
                 <div class="hero-image reveal fade-right">
@@ -262,6 +264,64 @@
             </div>
         </section>
 
+        <!-- Blogs Section -->
+        <section id="blogs" class="blogs section bg-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Latest <span>Blogs</span></h2>
+                    <div class="underline"></div>
+                    <p class="subtitle">Insights and thoughts on design and technology</p>
+                </div>
+                <div class="blogs-grid">
+                    <!-- Blog 1 -->
+                    <div class="blog-card reveal">
+                        <div class="blog-img">
+                            <div class="img-placeholder bg-gradient-2">Blog Image 1</div>
+                        </div>
+                        <div class="blog-info">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 15, 2026</span>
+                                <span><i class="fa-solid fa-tag"></i> UI/UX</span>
+                            </div>
+                            <h3>The Future of UI Design in Web3</h3>
+                            <p>Exploring how decentralized applications are reshaping the way we think about user interfaces.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Blog 2 -->
+                    <div class="blog-card reveal fade-up" style="transition-delay: 0.2s;">
+                        <div class="blog-img">
+                            <div class="img-placeholder bg-gradient-1">Blog Image 2</div>
+                        </div>
+                        <div class="blog-info">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Sep 28, 2026</span>
+                                <span><i class="fa-solid fa-tag"></i> WordPress</span>
+                            </div>
+                            <h3>Optimizing WordPress with Elementor</h3>
+                            <p>Best practices for building fast, responsive, and beautiful websites using Elementor page builder.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Blog 3 -->
+                    <div class="blog-card reveal fade-up" style="transition-delay: 0.4s;">
+                        <div class="blog-img">
+                            <div class="img-placeholder bg-gradient-3">Blog Image 3</div>
+                        </div>
+                        <div class="blog-info">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Aug 10, 2026</span>
+                                <span><i class="fa-solid fa-tag"></i> Graphic Design</span>
+                            </div>
+                            <h3>Color Psychology in Branding</h3>
+                            <p>A deep dive into how color choices affect consumer perception and brand identity.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="contact section">
             <div class="container">
@@ -302,16 +362,22 @@
                     <div class="contact-form-container">
                         <form id="contactForm" class="contact-form">
                             <div class="form-group">
-                                <input type="text" id="name" required placeholder="Your Name">
+                                <input type="text" id="name" name="entry.430971480" required placeholder="Your Name">
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" required placeholder="Your Email">
+                                <input type="email" id="email" name="entry.463923158" required placeholder="Your Email">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="subject" required placeholder="Subject">
+                                <input type="tel" id="mobile" name="entry.802443627" required placeholder="Mobile Number">
                             </div>
                             <div class="form-group">
-                                <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+                                <select id="service" name="entry.387401197" required>
+                                    <option value="" disabled selected>Service Needed For You</option>
+                                    <option value="WordPress Development">WordPress Development</option>
+                                    <option value="Search Engine Optimization">Search Engine Optimization</option>
+                                    <option value="Social Media Marketing">Social Media Marketing</option>
+                                    <option value="AI 3D Website">AI 3D Website</option>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary submit-btn">Send Message <i
                                     class="fa-solid fa-paper-plane"></i></button>
